@@ -1,0 +1,26 @@
+[[34m2024-04-29T08:52:50.482+0000[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /opt/***/dags[0m
+[[34m2024-04-29T08:52:52.178+0000[0m] {[34mtaskinstance.py:[0m2073} INFO[0m - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train_model.extract_data __***_temporary_run_2024-04-29T08:52:52.119210+00:00__ [None]>[0m
+[[34m2024-04-29T08:52:52.188+0000[0m] {[34mtaskinstance.py:[0m2073} INFO[0m - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train_model.extract_data __***_temporary_run_2024-04-29T08:52:52.119210+00:00__ [None]>[0m
+[[34m2024-04-29T08:52:52.188+0000[0m] {[34mtaskinstance.py:[0m2303} INFO[0m - Starting attempt 1 of 2[0m
+[[34m2024-04-29T08:52:52.189+0000[0m] {[34mtaskinstance.py:[0m2385} WARNING[0m - cannot record queued_duration for task extract_data because previous state change time has not been saved[0m
+[[34m2024-04-29T08:52:52.191+0000[0m] {[34mtaskinstance.py:[0m2327} INFO[0m - Executing <Task(PythonOperator): extract_data> on 2024-04-29 00:00:00+00:00[0m
+[[34m2024-04-29T08:52:52.485+0000[0m] {[34mtaskinstance.py:[0m2644} INFO[0m - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='train_model' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2024-04-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='__***_temporary_run_2024-04-29T08:52:52.119210+00:00__'[0m
+[[34m2024-04-29T08:52:52.489+0000[0m] {[34mtaskinstance.py:[0m430} INFO[0m - ::endgroup::[0m
+[[34m2024-04-29T08:52:52.510+0000[0m] {[34mbase.py:[0m84} INFO[0m - Using connection ID 'clean_data' for task execution.[0m
+[[34m2024-04-29T08:52:52.536+0000[0m] {[34mtrain_model.py:[0m24} INFO[0m - Extracted 1685 rows[0m
+[[34m2024-04-29T08:52:52.537+0000[0m] {[34mpython.py:[0m237} INFO[0m - Done. Returned value was:                  id                time  ...           close        volume
+0     1713965040000 2024-04-24 13:24:00  ...  66059.99000000   25.93611000
+1     1713965100000 2024-04-24 13:25:00  ...  66031.77000000   21.52992000
+2     1713965640000 2024-04-24 13:34:00  ...  65942.59000000  100.43562000
+3     1713964800000 2024-04-24 13:20:00  ...  66100.00000000   16.39342000
+4     1713965280000 2024-04-24 13:28:00  ...  66055.90000000   24.97210000
+...             ...                 ...  ...             ...           ...
+1680  1714052040000 2024-04-25 13:34:00  ...  63090.20000000   71.43001000
+1681  1714052100000 2024-04-25 13:35:00  ...  63274.38000000   66.39368000
+1682  1714052160000 2024-04-25 13:36:00  ...  63199.06000000   37.71733000
+1683  1714052220000 2024-04-25 13:37:00  ...  63271.08000000   45.60761000
+1684  1714125660000 2024-04-26 10:01:00  ...  64496.00000000    7.01421000
+
+[1685 rows x 7 columns][0m
+[[34m2024-04-29T08:52:52.554+0000[0m] {[34mtaskinstance.py:[0m441} INFO[0m - ::group::Post task execution logs[0m
+[[34m2024-04-29T08:52:52.631+0000[0m] {[34mtaskinstance.py:[0m1205} INFO[0m - Marking task as SUCCESS. dag_id=train_model, task_id=extract_data, execution_date=20240429T000000, start_date=, end_date=20240429T085252[0m
